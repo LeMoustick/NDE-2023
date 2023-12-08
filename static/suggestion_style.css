@@ -1,0 +1,194 @@
+body {
+    width: 100%;
+    font-size: 200%;
+  }
+  
+  h1 {
+    padding-top: 3%;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  h3 {
+    padding-left: 2%;
+  }
+  
+  .listeQuestions{
+    top:0;
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1%;
+  
+  }
+  
+  .listeQ1, .listeQ2, .listeQ3, .listeQ4, .listeQ5, .listeQ6, .listeQ7, .listeQ8, .listeQ9, .listeQ10{
+    background-color: rgb(212, 210, 210);
+    height: 9%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  .listeQ1:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ2:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ3:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ4:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ5:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ6:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ7:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ8:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ9:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  .listeQ10:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: rgb(117, 219, 117);
+  }
+  
+  
+  .q1{
+    width: 70%;
+    height: 800px;
+    text-align: center;
+    padding-left: 30%;
+  }
+  
+  .q1rep{
+    width: 50%;
+    height: 50%;
+    margin: 10% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10%;
+  }
+  
+  .q1rep1:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  .q1rep2:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  .q1rep3:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  .q1rep4:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  
+  .q1rep1, .q1rep2, .q1rep3, .q1rep4{
+    background-color: rgb(117, 117, 211);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .q2{
+    width: 70%;
+    height: 800px;
+    text-align: center;
+    padding-left: 30%;
+  }
+  
+  .q2rep{
+    width: 50%;
+    height: 50%;
+    margin: 10% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10%;
+  }
+  
+  .q2rep1:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  .q2rep2:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  .q2rep3:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  .q2rep4:hover{
+    transform:scale(1.1);
+    transition: transform(0.3s ease);
+    background-color: cornflowerblue;
+  }
+  
+  .q2rep1, .q2rep2, .q2rep3, .q2rep4{
+    background-color: rgb(117, 117, 211);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

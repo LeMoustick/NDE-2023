@@ -1,0 +1,118 @@
+body {
+  width: 100%;
+  font-size: 200%;
+  font-family: Poppins,BlinkMacSystemFont,-apple-system,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.question {
+  padding-top: 3%;
+  font-size: 25px;
+}
+
+h3 {
+  padding-left: 2%;
+}
+
+.listeQuestions{
+  position: fixed;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  gap: 1%;
+
+}
+
+.listeQ{
+  background-color: rgba(141, 141, 141, 0.788);
+  height: 9%;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+} 
+
+.listeQ:hover{
+  transform:scale(1.1);
+  transition: transform(0.3s ease);
+  background-color: rgb(117, 219, 117);
+}
+
+
+.q1{
+  width: 70%;
+  height: 800px;
+  text-align: center;
+  padding-left: 30%;
+  background-image: url(assets/images/bg_home.png);
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+}
+
+.q1rep {
+  background-color: lightgray;
+  /* Espacement intérieur pour les éléments enfants */
+  padding: 60px;
+  /* Arrondi des coins pour un look plus doux */
+  border-radius: 8px;
+  /* Couleur du texte à l'intérieur de la div */
+  color: white;
+  width: 70%;
+  height: 50%;
+  margin: 10% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10%;
+  margin-top: 60px;
+  border: 2px solid black;
+}
+
+.numeroq{
+  margin-top: 0px;
+  padding-top: 20px;
+  font-size: 45px;
+}
+.ntm{
+  text-decoration: none;
+  color: black;
+}
+
+.bouton {
+  display: block;
+  margin-left: 58%;
+  text-align: center;
+  background-color: green;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.bouton:hover {
+  background-color: blue;
+  
+}
+
+input[type="radio"] {
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  position: relative;
+  padding-left: 30px;
+  line-height: 24px;
+  color: lightgrey;
+}
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Nuit Info</title>
+    <link rel="stylesheet" href="static/styles_quiz.css">
+</head>
+
+<body>
+    <div class="listeQuestions">
+        {% for i in range (1, 11) %}
+            <div class="listeQ">
+                <a class = "ntm" href = '#text{{i-1}}' type = "button"> Question {{i}} </a>
+            </div>
+        {% endfor %}
+    </div>
+    <form action="api/question" methode="POST" class="question1">
+        {% for i in range (0, 6) %}
+            <div id = 'text{{i}}' class="q1">
+                <h1 class="numeroq">Question {{i+1}}</h1>
+                <p class = "question">{{tab[i][1]}}</p>
+                <input style="display: none;" name="id_q" value="{{tab[i][0]}}">
+                <div class="q1rep">
+                    {% for i2 in range (1,5)%}
+                        <input type="radio" name="r_{{i}}"><p style = "color: black;font-size: 20px; padding: 0;">{{tab[i][i2+1]}}</p></input>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        <button class = "bouton" type="submit" value="submit">Corrigé</button>
+    </form>
+</body>

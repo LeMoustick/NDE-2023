@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions</title>
+    <link rel="stylesheet" href="../static/suggestion_style.css">
+</head>
+<body>
+    <div class="titre">
+        <h1>Suggestions</h1>
+        <h2>Parce que votre satisfaction est notre priorité<br>Et que votre avis compte !</h2>
+    </div>
+    <div class="avis">
+        {% for i in range(1,5) %}
+        <div class="avis{{i}}">
+            <h3 style="text-align:center">{{tab[i][1]}}</h3>
+            <h3>Avis :</h3>
+            <p>{{tab[i][3]}}</p>
+        </div>
+    </div>
+    <form action="/api/avis" method="POST" class="crea" name="csrf_token" value="{{csrf_token()}}">
+        <textarea></textarea>
+        <input type="text" id="nom" name="nom" placeholder="Nom d'utilisateur">
+        <input type="submit", value="submit">
+    </form>
+</body>
+</html>

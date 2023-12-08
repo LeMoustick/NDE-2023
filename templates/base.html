@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/base.css">
+    </head>
+    <body>
+        <div id="A"><p>Préjugé : Les éoliennes tuent massivement les oiseaux</p>
+                     <p>Débunkage : Bien que les éoliennes puissent avoir un impact sur la faune aviaire, les chiffres relatifs aux décès d'oiseaux sont généralement beaucoup plus faibles que ceux dus aux autres menaces, telles que les collisions avec des bâtiments, les véhicules et les lignes électriques.</p></div>
+        <img class="mySlides" src="../assets/images/plain.png" id="mySlideA"> 
+        <div id="B"><p>Préjugé : "L'énergie solaire ne peut pas être utilisée de manière efficace dans des régions nuageuses ou pluvieuses."</p>
+            <p>debunkage : En réalité, même dans des régions avec un ensoleillement variable, les systèmes solaires peuvent être efficaces. Les panneaux solaires modernes sont conçus pour capturer la lumière du soleil diffuse par temps nuageux. De plus, certaines régions nuageuses, comme l'Allemagne, ont réussi à mettre en œuvre avec succès des installations solaires et ont atteint une part significative d'énergie solaire dans leur mix énergétique. De nouvelles technologies, telles que le suivi solaire et le stockage d'énergie, contribuent également à rendre l'énergie solaire plus fiable et adaptée à une variété de conditions météorologiques. Ainsi, le potentiel de l'énergie solaire n'est pas limité uniquement aux régions ensoleillées.</p></div>
+        <img class="mySlides" src="../assets/images/plain2.png" id="mySlideB">
+        <div id="C"></div>
+        <img class="mySlides" src="../assets/images/plain3.png" id="mySlideC"> 
+        <div id="D"><p>Les réacteurs actuels, tels que les réacteurs à eau pressurisée, sont conçus avec des caractéristiques de sécurité intrinsèques et des systèmes de refroidissement avancés pour éviter la surchauffe du cœur du réacteur. De plus, les normes de régulation et les protocoles de sécurité sont devenus plus stricts, et les exploitants de centrales nucléaires mettent en œuvre des protocoles de gestion des risques rigoureux.</p></div>
+        <img class="mySlides" src="../assets/images/plain4.png" id="mySlideD">
+        <div id="E"><p>Préjugé : Les déchets nucléaires sont ingérables et posent un danger pour l'environnement.</p>
+            <p>Débunkage : Les déchets nucléaires sont gérés de manière responsable par le biais de procédures de stockage et de confinement. De nombreuses solutions de gestion à long terme sont en cours de développement, notamment le stockage géologique profond. Comparativement, les émissions de gaz à effet de serre provenant de la production d'énergie nucléaire sont faibles par rapport aux énergies fossiles.</p></div>
+        <img class="mySlides" src="../assets/images/plain5.png" id="mySlideE"> 
+        <div id="F"><p>Préjugé : "L'énergie nucléaire est toujours dangereuse en raison du risque de catastrophes comme celles de Tchernobyl et Fukushima."</p>
+        <p>Réponse pour le debunk : Bien que des accidents nucléaires majeurs tels que Tchernobyl et Fukushima aient eu lieu, il est important de noter que la technologie nucléaire a considérablement évolué depuis ces incidents. Les centrales nucléaires modernes intègrent des dispositifs de sécurité avancés et des conceptions améliorées pour prévenir et atténuer les accidents.</p></div>
+        <img class="mySlides" src="../assets/images/plain6.png" id="mySlideF">
+        
+        <img class="prev" onclick="plusSlides(-1)" src="../assets/images/fleche1.png">
+        <img class="next" onclick="plusSlides(1)" src="../assets/images/fleche2.png">
+        <div style="position: fixed; bottom: 0; left: 0; right: 0; text-align: center;">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <form method="POST" action="/api/choice">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <input type="submit" name ="submit_button" class="btn btn-secondary btn-bottom-caracter" style="background-color: #E6BA7C;" value="Je suis américain">
+                    <input type="submit" name ="submit_button" class="btn btn-secondary btn-bottom-caracter" style="background-color: #3ac13c;" value="Je suis mangeur de graine">
+                </form>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+
+
+    <script> 
+
+    var slideIndex = 1;
+     showSlides(slideIndex);
+     function plusSlides(n) { showSlides(slideIndex += n); } 
+     function showSlides(n) { 
+        var i; 
+        var slides = document.getElementsByClassName("mySlides"); 
+        if (n > slides.length) { 
+            slideIndex = 1 ;
+        } 
+        if (n < 1) { slideIndex = slides.length } 
+        for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; } 
+        slides[slideIndex - 1].style.display = "inline-block"; 
+        switch(slideIndex - 1){
+            case 0:
+                document.getElementById('A').style.display = 'block';
+                document.getElementById('B').style.display = 'none';
+                document.getElementById('C').style.display = 'none';
+                document.getElementById('D').style.display = 'none';
+                document.getElementById('E').style.display = 'none';
+                document.getElementById('F').style.display = 'none';
+                break;
+            case 1:
+                document.getElementById('A').style.display = 'none';
+                document.getElementById('B').style.display = 'block';
+                document.getElementById('C').style.display = 'none';
+                document.getElementById('D').style.display = 'none';
+                document.getElementById('E').style.display = 'none';
+                document.getElementById('F').style.display = 'none';
+                break;
+            case 2:
+                document.getElementById('A').style.display = 'none';
+                document.getElementById('B').style.display = 'none';
+                document.getElementById('C').style.display = 'block';
+                document.getElementById('D').style.display = 'none';
+                document.getElementById('E').style.display = 'none';
+                document.getElementById('F').style.display = 'none';
+                break;
+            case 3:
+                document.getElementById('A').style.display = 'none';
+                document.getElementById('B').style.display = 'none';
+                document.getElementById('C').style.display = 'none';
+                document.getElementById('D').style.display = 'block';
+                document.getElementById('E').style.display = 'none';
+                document.getElementById('F').style.display = 'none';
+                break;
+            case 4:
+                document.getElementById('A').style.display = 'none';
+                document.getElementById('B').style.display = 'block';
+                document.getElementById('C').style.display = 'none';
+                document.getElementById('D').style.display = 'none';
+                document.getElementById('E').style.display = 'none';
+                document.getElementById('F').style.display = 'none';
+                break;
+            case 5:
+                document.getElementById('A').style.display = 'none';
+                document.getElementById('B').style.display = 'none';
+                document.getElementById('C').style.display = 'none';
+                document.getElementById('D').style.display = 'none';
+                document.getElementById('E').style.display = 'block';
+                document.getElementById('F').style.display = 'none';
+                break;
+            case 6:
+                document.getElementById('A').style.display = 'none';
+                document.getElementById('B').style.display = 'none';
+                document.getElementById('C').style.display = 'none';
+                document.getElementById('D').style.display = 'none';
+                document.getElementById('E').style.display = 'none';
+                document.getElementById('F').style.display = 'block';
+                break;
+        }
+    }
+    </script> 
+    </body> 
+</html>
